@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Game</title>
+    <style>
+        .container
+        {
+            height: 500px;
+            width: 500px;
+            border:2px solid black;
+            margin:10px;
+            padding: 10px;
+            background-color:lightgoldenrodyellow;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+
+        }
+        .item
+        {
+            height: 150px;
+            width: 150px;
+            border:1px solid green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+      <!-- <h1>Choose Any Numer</h1> -->
+        <script>
+            let i=1;
+            for(i=1;i<10;i++)
+            {
+            let container=document.getElementById("container");
+            let element=document.createElement("div");
+            element.id="item"+i;
+            element.className="item";
+            let tnode=document.createTextNode("This is a box"+i);
+            element.appendChild(tnode);
+            container.appendChild(element);
+           // console.log(element);
+            }
+        </script>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
